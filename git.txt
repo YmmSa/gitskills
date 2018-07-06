@@ -1,0 +1,53 @@
+1. git add；  命令实际上就是把要提交的所有修改放到暂存区
+git add .；            提交被修改的和新建的文件，但不包括被删除的文件                            
+
+git add -u     --update ；    update tracked files    更新所有改变的文件，即提交所有变化的文件
+
+git add -A    --all；      add changes from all tracked and untracked files   提交已被修改和已被删除文件，但是不包括新的文件
+
+2. git commit；  把暂存区的所有内容提交到当前本地库分支，-m 添加说明
+
+3.git reset --hard HEAD^；  HEAD当前分支版本，HEAD^上一个版本，上100个HEAD~100
+
+4. git checgitkout -- readme.txt;  意思就是，把readme.txt文件在工作区的修改全部撤销，这里有两种情况：
+
+一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；
+
+一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。
+
+总之，就是让这个文件回到最近一次git commit或git add时的状态。
+
+5. git rm;  删完git commit；用于删除一个文件。如果一个文件已经被提交到版本库，那么你永远不用担心误删，但是要小心，你只能恢复文件到最新版本，你会丢失最近一次提交后你修改的内容。
+
+6  git remote add origin git@github.com:michaelliao/learngit.git； 关联一个远程库，使用命令
+
+关联后，使用命令git push -u origin master第一次推送master分支的所有内容；
+
+此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改；
+
+
+7 git clone 地址； 
+
+8 git branch dev； 创建分支dev
+
+9 git checkout dev； 切换到dev分支；  git checkout -b dev； 创建并切换到dev分支
+
+10 git branch 查看当本地分支，-a  查看远程分支
+
+11 git branch -d 分支名； 删除分支
+
+11 git push origin dev； 在远程仓库也建立一个dev分支
+
+12 git merge 分支名；命令用于合并指定分支到当前分支; 加上--no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并。
+
+13 是用git stash apply恢复，但是恢复后，stash内容并不删除，你需要用git stash drop来删除；
+
+14 git remote -v; 查看远程git地址
+
+15 git push origin dev 把本地分支提交到远程仓库
+
+另一种方式是用git stash pop，恢复的同时把stash内容也删了：
+
+问题：tortoise会不会更方便？
+      一个个找修改了的文件》一个个提交吗？
+      commit之后连感叹号提示都没了，忘了push怎么办？
