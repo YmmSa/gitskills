@@ -9,7 +9,7 @@ git add -A    --all；      add changes from all tracked and untracked files   提
 
 3.git reset --hard HEAD^；  HEAD当前分支版本，HEAD^上一个版本，上100个HEAD~100
 
-4. git checgitkout -- readme.txt;  意思就是，把readme.txt文件在工作区的修改全部撤销，这里有两种情况：
+4. git checkout -- readme.txt;  意思就是，把readme.txt文件在工作区的修改全部撤销，这里有两种情况：
 
 一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；
 
