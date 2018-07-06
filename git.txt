@@ -51,3 +51,5 @@ git add -A    --all；      add changes from all tracked and untracked files   提
 问题：tortoise会不会更方便？
       一个个找修改了的文件》一个个提交吗？
       commit之后连感叹号提示都没了，忘了push怎么办？
+
+16
