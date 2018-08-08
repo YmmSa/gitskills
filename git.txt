@@ -43,7 +43,7 @@ git add -A    --all；      add changes from all tracked and untracked files   提
 13 是用git stash apply恢复，但是恢复后，stash内容并不删除，你需要用git stash drop来删除；
 
 14 git remote -v; 查看远程git地址
-
+git
 15 git push origin dev 把本地分支提交到远程仓库
 
 另一种方式是用git stash pop，恢复的同时把stash内容也删了：
@@ -51,7 +51,7 @@ git add -A    --all；      add changes from all tracked and untracked files   提
 问题：tortoise会不会更方便？
       一个个找修改了的文件》一个个提交吗？
       commit之后连感叹号提示都没了，忘了push怎么办？
-16
+16  git checkout -b dev origin/dev，作用是checkout远程的dev分支，在本地起名为dev分支，并切换到本地的dev分支
 17
 18
 19
